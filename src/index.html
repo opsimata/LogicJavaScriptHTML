@@ -6,32 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/style.css">
-    <title>JavaScript/HTML Tasks</title>
+    <title>JavaScript/HTML Calculadora</title>
 </head>
 
-<body class="fundo-pagina">
+<body class="page-background">
     <script>
 
-        var ano = 2016
+        function lineBreaker() {
+            document.write("<br>");
+        }
+        function print(printContent) {
+            document.write(printContent);
+            lineBreaker();
+        }
 
-        document.write("Flávio tem: " + (ano - 1977) + " Anos em " + ano +  "<br>");
-        document.write("Joaquim tem: " + (ano - 1996) + " Anos em " + ano +  "<br>");
-        document.write("Barney tem: " + (ano - 1976) + " Anos em " + ano +  "<br><br>");
+        var ano = 2016;
+
+        print("Flávio tem " + (ano - 1977) + " anos em " + ano + ".");
+        lineBreaker();
+        print("Joaquim tem " + (ano - 1996) + " anos em " + ano + ".");
+        lineBreaker();
 
         ano = 2017
 
-        document.write("Barney tem: " + (ano - 1976) + " Anos em " + ano + "<br>");
-
-        var idadeFlavio = 40, idadeJoaquim = 21, idadeBarney = 41;
-
-        media = (idadeFlavio + idadeJoaquim + idadeBarney) / 3;
-
-        document.write("<br>A média das idades em " + ano + " é: " + (media.toFixed(0)) + " Anos <br>");
-
-        var nome = "Flávio";
-        idadeFlavio = 40;
-
-        document.write("<br>A idade de " + nome +  " em " + ano + " é: " + idadeFlavio + " Anos <br>");
+        print("Barney tem " + (ano - 1976) + " anos em " + ano + ".");
 
     </script>
 </body>
