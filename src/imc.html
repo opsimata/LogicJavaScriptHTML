@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Document</title>
+</head>
+
+<body class="page-background">
+    <script>
+
+        function lineBreaker() {
+            document.write("<br>");
+        }
+        function print(printContent) {
+            document.write(printContent);
+            lineBreaker();
+        }
+        function calculaIMC(pessoaAltura, pessoaPeso) {
+
+            return pessoaPeso / (pessoaAltura * pessoaAltura);
+        }
+
+        var nome = prompt("Informe o nome: \n"), altura = prompt("Informe a altura: \n"), peso = prompt("Informe o peso: \n");
+
+        print("Calculador de Índice de Massa Corporal");
+
+        lineBreaker();
+        lineBreaker();
+
+        var imcPessoa = calculaIMC(altura, peso);
+        print("O IMC de " + nome + " é: " + imcPessoa.toFixed(1) + ".")
+
+        lineBreaker();
+        lineBreaker();
+
+    </script>
+</body>
+
+</html>
