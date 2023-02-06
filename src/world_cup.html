@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <script src="./components/Print.js"></script>
+    <script src="./components/LineBreaker.js"></script>
+    <title>World Cup Year</title>
+</head>
+
+<body class="page-background">
+    <script>
+
+        let cupYear = 1930;
+
+        let cupYearLimiter = parseInt(prompt("Até quando você gostaria de consultar os anos de copa?"))
+
+        if (cupYearLimiter < 1930) {
+            print("Não houveram copas do mundo antes de 1930.")
+        }
+
+        while (cupYear <= cupYearLimiter) {
+
+            print("No ano de " + cupYear + " teve copa do mundo.")
+            
+            cupYear = cupYear + 4;
+
+        }
+
+    </script>
+</body>
+
+</html>
