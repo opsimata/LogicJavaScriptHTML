@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <script src="./components/Print.js"></script>
+    <script src="./components/LineBreaker.js"></script>
+    <title>Guesser</title>
+</head>
+
+<body class="page-background">
+    <script>
+
+        var targetNumber = Math.round(Math.random() * 10);
+        var guess = parseInt(prompt("Faça sua tentativa"));
+
+        if (targetNumber == guess) {
+            print("Palpite correto")
+            lineBreaker();
+        }else{
+            print("Palpite incorreto.\nCorreto: " + targetNumber);
+            lineBreaker();
+        }
+
+    </script>
+</body>
+
+</html>
