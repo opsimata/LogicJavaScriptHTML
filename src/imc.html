@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style/style.css">
-    <title>Document</title>
+    <title>IMC Calculator</title>
 </head>
 
 <body class="page-background">
@@ -32,10 +32,20 @@
         lineBreaker();
 
         var imcPessoa = calculaIMC(altura, peso);
-        print("O IMC de " + nome + " é: " + imcPessoa.toFixed(1) + ".")
+        print("O IMC de " + nome + " é: " + imcPessoa.toFixed(1))
 
         lineBreaker();
         lineBreaker();
+
+        if (imcPessoa <= 18.5) {
+            print("Abaixo do peso normal.")
+        }
+        if (imcPessoa >= 35) {
+            print("Acima do peso normal.")
+        }
+        if (imcPessoa > 18.5 && imcPessoa < 35){
+            print("Peso considerado normal.")
+        }
 
     </script>
 </body>
