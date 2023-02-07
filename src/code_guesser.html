@@ -9,25 +9,26 @@
     <script src="./components/Print.js"></script>
     <script src="./components/LineBreaker.js"></script>
     <script src="./components/Verifier.js"></script>
-    <title>Guesser</title>
+    <title>Code Guesser</title>
 </head>
 
 <body class="page-background">
 
     <section class="container">
         <article class="input-box">
-            <input class="input" />
+            <p>Code Guesser</p>
+            <p>Type your guess bellow:</p>
+            <input class="input" type="number" placeholder="Type your guess here..." />
             <button class="button">Guess</button>
         </article>
-        <div class="spacer"></div>
     </section>
 
     <script>
-        var guessTarget = Math.round(Math.random() * 20);
+        var guessTarget = [5, 7, 10, 2];
 
         var guessInput = document.querySelector("input");
         guessInput.focus();
-        
+
         var inputButton = document.querySelector("button");
 
         inputButton.onclick = verify;
