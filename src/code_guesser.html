@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <script src="./components/Print.js"></script>
     <script src="./components/LineBreaker.js"></script>
+    <script src="./components/Verifier.js"></script>
     <title>Guesser</title>
 </head>
 
 <body class="page-background">
 
     <section class="container">
-        <article class="tables">
-            <p>
-                <script>
-                    for (let line = 1; line <= 3; line++) {
-                        for (let column = 1; column <= 10; column++) {
-                            print("*");
-                        }
-                        print("<br>")
-                    }
-                </script>
-            </p>
+        <article class="input-box">
+            <input class="input" />
+            <button class="button">Guess</button>
         </article>
         <div class="spacer"></div>
     </section>
 
+    <script>
+        var guessTarget = Math.round(Math.random() * 20);
+
+        var guessInput = document.querySelector("input");
+        guessInput.focus();
+        
+        var inputButton = document.querySelector("button");
+
+        inputButton.onclick = verify;
+
+    </script>
 </body>
 
 </html>
