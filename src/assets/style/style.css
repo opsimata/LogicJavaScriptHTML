@@ -1,7 +1,42 @@
-body{
-    background-color: #ffffff;
-    color: #000;
+body {
+    background-color: #d1d1d1;
+    color: #FFF;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin: 2rem 0 0 3rem; 
+    font-size: 1.3rem;
+    margin: 2rem 0 0 3rem;
+    text-align: left;
+}
+
+.container {
+    background-color: #838383;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 1px 1px 5px 1px #b8b8b8;
+}
+
+.tables {
+    background-color: #565656;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+.spacer {
+    width: 1rem;
+    background-color: #565656;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title{
+    padding: .1rem;
+    background-color: #565656;
+    margin-bottom: 1rem;
+    border-radius: 12px;
 }

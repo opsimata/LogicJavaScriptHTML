@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <script src="./components/Print.js"></script>
+    <script src="./components/LineBreaker.js"></script>
+    <title>Multiplication Table</title>
+</head>
+
+<body class="page-background">
+
+    <section class="container">
+        <div class="title"><p>Dinamic Multiplication Table</p></div>
+        <article class="tables">
+            <script>
+                let multiplicator = parseInt(prompt("Informe o multiplicador"))
+                let result = 0;
+
+                print("Tabuada do " + multiplicator + " :")
+                lineBreaker();
+
+                for (let index = 0; index <= 10; index++) {
+                    result = multiplicator * index;
+                    print(multiplicator + " x " + index + " = " + result);
+                }
+            </script>
+        </article>
+
+        <div class="spacer"></div>
+
+        <article class="tables">
+            <script>
+                let multiplicator_2 = parseInt(prompt("Informe o segundo multiplicador"))
+                let index_2 = 0;
+
+                print("Tabuada do " + multiplicator_2 + " :")
+                lineBreaker();
+
+                while (index_2 <= 10) {
+                    print(multiplicator_2 + " x " + index_2 + " = " + multiplicator_2 * index_2);
+                    index_2++;
+                }
+            </script>
+        </article>
+
+        <div class="spacer"></div>
+
+        <article class="tables">
+            <script>
+                let multiplicator_3 = parseInt(prompt("Informe o terceiro multiplicador"))
+                let index_3 = 0;
+
+                print("Tabuada do " + multiplicator_3 + " :")
+                lineBreaker();
+
+                while (index_3 <= 10) {
+                    print(multiplicator_3 + " x " + index_3 + " = " + multiplicator_3 * index_3);
+                    index_3++;
+                }
+            </script>
+        </article>
+
+
+
+    </section>
+</body>
+
+</html>
