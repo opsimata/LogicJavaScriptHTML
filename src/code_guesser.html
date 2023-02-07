@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./assets/style/style.css">
     <script src="./components/Print.js"></script>
     <script src="./components/LineBreaker.js"></script>
-    <script src="./components/Verifier.js"></script>
     <title>Code Guesser</title>
 </head>
 
@@ -16,15 +15,69 @@
 
     <section class="container">
         <article class="input-box">
-            <p>Code Guesser</p>
-            <p>Type your guess bellow:</p>
+            <h1>Code Guesser</h1>
+            <p>Type a number between 0 and 10 below:</p>
             <input class="input" type="number" placeholder="Type your guess here..." />
             <button class="button">Guess</button>
         </article>
     </section>
 
     <script>
-        var guessTarget = [5, 7, 10, 2];
+
+        function verify() {
+            var rightGuess = false;
+
+            for (let position = 0; position < guessTargets.length; position++) {
+                if (guessInput.value == guessTargets[position]) {
+                    alert("Right guess!\nNailed it! :))");
+                    rightGuess = true;
+                    window.location.reload()
+                    break;
+                }
+            }
+            if (rightGuess == false) {
+                alert("Wrong guess!\nBetter luck next time! :((");
+            }
+            guessInput.value = "";
+            guessInput.focus();
+        }
+
+        function randomSorter() {
+            return Math.round(Math.random() * 10);
+        }
+
+        function numberSorter(numQuantity) {
+            var keyCodes = [],
+                counter = 1;
+
+            while (counter <= numQuantity) {
+
+                var aleatoryNumber = randomSorter();
+
+                // if (aleatoryNumber != 0) { || Use this line and line 72 in case you don't want zero as a valid guess.
+
+                    var inMatrix = false;
+
+                    for (let index = 0; index < keyCodes.length; index++) {
+                        if (keyCodes[index] == aleatoryNumber) {
+                            inMatrix = true;
+                            break;
+                        }
+                    }
+                    if (inMatrix == false) {
+                        keyCodes.push(aleatoryNumber);
+                        counter++
+                    }
+
+                // }
+            }
+            return keyCodes;
+        }
+
+
+        var guessTargets = numberSorter(3)
+
+        console.log(guessTargets)
 
         var guessInput = document.querySelector("input");
         guessInput.focus();
