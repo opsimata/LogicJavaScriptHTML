@@ -12,20 +12,37 @@
 </head>
 
 <body class="page-background">
-    <script>
 
-        var targetNumber = Math.round(Math.random() * 10);
-        var guess = parseInt(prompt("Faça sua tentativa"));
+    <section class="container">
+        <article class="tables">
+            <p>
+                <script>
 
-        if (targetNumber == guess) {
-            print("Palpite correto")
-            lineBreaker();
-        }else{
-            print("Palpite incorreto.\nCorreto: " + targetNumber);
-            lineBreaker();
-        }
+                    alert("Você tem 3 chances para acertar um número de 0 a 20:");
 
-    </script>
+                    let index = 1, chances = 3;
+                    let targetNumber = Math.round(Math.random() * 20);
+
+                    while (index <= chances) {
+                        let guess = parseInt(prompt("Faça sua tentativa: \n(Tentativa número " + index + ")"));
+
+                        if (targetNumber == guess) {
+                            print("Palpite correto!");
+                            break;
+                        } else {
+                            alert("Palpite incorreto!")
+                            index++
+                        }
+                        if (index == 3) {
+                            print("Todos os palpites foram incorretos!<br> O número correto era: " + targetNumber + ".");
+                        }
+                    }
+                </script>
+            </p>
+        </article>
+        <div class="spacer"></div>
+    </section>
+
 </body>
 
 </html>
